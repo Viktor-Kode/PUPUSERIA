@@ -9,7 +9,6 @@ export const HeaderData: HeaderItem[] = [
   { label: 'About Us', href: '/#aboutus' },
   { label: 'Menu', href: '/#menu' },
   { label: 'Reserve Table', href: '/#reserve' },
-  { label: 'Docs', href: '/documentation' },
 ]
 
 export const FeaturesData: FeaturesType[] = [
@@ -160,7 +159,6 @@ export const FooterLinkData: FooterLinkType[] = [
       { label: 'Landing Pages', href: '#' },
       { label: 'Restaurant Kit', href: '#' },
       { label: 'Contact', href: '#' },
-      { label: 'Docs', href: '/documentation' },
     ],
   },
   {

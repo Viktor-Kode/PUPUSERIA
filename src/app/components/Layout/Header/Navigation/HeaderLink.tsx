@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { HeaderItem } from '../../../../types/menu'
 import { usePathname } from 'next/navigation'
 
-const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
+const HeaderLink: React.FC<{ item: HeaderItem; sticky: boolean }> = ({ item, sticky }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false)
   const path = usePathname()
   const handleMouseEnter = () => {
@@ -27,8 +27,8 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
         href={item.href}
         className={`text-lg flex font-medium duration-300  ${
           path === item.href
-            ? 'text-primary '
-            : ' text-black/50  hover:text-primary'
+            ? sticky ? 'text-primary' : 'text-white'
+            : sticky ? 'text-black/50 hover:text-primary' : 'text-white hover:text-white/80'
         }`}>
         {item.label}
         {item.submenu && (

@@ -48,7 +48,7 @@ export default function ScrollToTop() {
           type='button'
           onClick={handleDownloadMenu}
           disabled={isExporting}
-          className={`hidden lg:block rounded-lg text-sm px-4 py-3.5 leading-none font-medium text-nowrap transition ${
+          className={`rounded-lg text-sm px-3 py-2.5 sm:px-4 sm:py-3.5 leading-none font-medium text-nowrap transition ${
             isExporting
               ? 'bg-primary/60 text-white cursor-not-allowed'
               : 'bg-primary text-white hover:bg-accent hover:text-deep'
