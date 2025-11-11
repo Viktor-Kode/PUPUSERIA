@@ -1,0 +1,20 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+const Logo: React.FC = () => {
+  return (
+    <Link href='/' className='flex items-center gap-4'>
+      <Image
+        src='/images/Logo/Logo.png'
+        alt='logo'
+        width={117}
+        height={34}
+        className='w-fit w-24 h-24'
+        quality={100}
+      />
+      <p className='text-primary text-2xl font-semibold '>Freddys Tacos</p>
+    </Link>
+  )
+}
+
+export default Logo
