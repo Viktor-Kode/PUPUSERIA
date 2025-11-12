@@ -14,7 +14,7 @@ const Footer: FC = () => {
       <div className='container'>
         <div className='grid grid-cols-1 sm:grid-cols-6 lg:gap-20 md:gap-24 sm:gap-12 gap-12 pb-10'>
           <div className='col-span-2'>
-            <Logo />
+            <Logo sticky={true} />
             <p className='text-sm font-medium text-grey my-5 max-w-70%'>
               A modern taco concept template built to showcase immersive dining
               experiences and chef-driven menus.
