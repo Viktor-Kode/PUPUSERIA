@@ -8,7 +8,7 @@ const Signin = () => {
   return (
     <>
       <div className='mb-10 text-center mx-auto inline-block'>
-        <Logo />
+        <Logo sticky={true} />
       </div>
 
       <SocialSignIn />
