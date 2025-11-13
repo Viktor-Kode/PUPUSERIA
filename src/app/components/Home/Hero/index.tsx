@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useCallback, useEffect, useRef } from 'react'
@@ -11,19 +10,22 @@ const heroSlides = [
     title: 'Freddys Tacos After Dark',
     description:
       'Step into our flagship taquería and savor chef-driven tacos fired over mesquite flames, paired with house-crafted agave cocktails.',
-    image: '/images/hero/hero-main.jpeg',
+    imageDesktop: '/images/hero-carousel-desktop/hero-carousel-1.jpeg',
+    imageMobile: '/images/hero-carousel-mobile/hero-mobile-1.jpeg',
   },
   {
     title: 'Seasonal Comal Creations',
     description:
       'Our kitchen reimagines regional Mexican staples with market produce, masa ground in-house, and bold street-food energy.',
-    image: '/images/hero/hero-secondary.jpeg',
+    imageDesktop: '/images/hero-carousel-desktop/hero-carousel-2.jpeg',
+    imageMobile: '/images/hero-carousel-mobile/hero-mobile-2.jpeg',
   },
   {
     title: 'Tasting Flights & Agave Pairings',
     description:
       'Reserve an experience featuring curated taco flights, ceviche pairings, and rare mezcals sourced directly from Oaxaca.',
-    image: '/images/Newsletter/lifestyle-1.jpeg',
+    imageDesktop: '/images/hero-carousel-desktop/hero-carousel-3.jpeg',
+    imageMobile: '/images/hero-carousel-mobile/hero-mobile-3.jpeg',
   },
 ]
 
@@ -73,13 +75,23 @@ const Hero = () => {
               <div
                 key={slide.title}
                 className='embla__slide relative min-w-full'>
+                {/* Desktop Image */}
                 <Image
-                  src={slide.image}
+                  src={slide.imageDesktop}
                   alt={slide.title}
                   fill
                   priority={index === 0}
                   sizes='100vw'
-                  className='object-cover brightness-75'
+                  className='hidden md:block object-cover brightness-75'
+                />
+                {/* Mobile Image */}
+                <Image
+                  src={slide.imageMobile}
+                  alt={slide.title}
+                  fill
+                  priority={index === 0}
+                  sizes='100vw'
+                  className='block md:hidden object-cover brightness-75'
                 />
                 <div className='absolute inset-0 bg-gradient-to-r from-deep/90 via-deep/60 to-transparent' />
                 <div className='relative z-10 h-full flex items-center'>
@@ -95,16 +107,26 @@ const Hero = () => {
                         {slide.description}
                       </p>
                       <div className='flex flex-col sm:flex-row gap-4 pt-4'>
-                        <Link href='/#menu'>
-                          <button className='rounded-full bg-primary text-deep font-semibold px-8 py-3 border border-primary hover:bg-accent transition'>
-                            View Menu
-                          </button>
-                        </Link>
-                        <Link href='/#reserve'>
-                          <button className='rounded-full border border-[#fef6da] text-[#fef6da] px-8 py-3 font-semibold hover:bg-[#fef6da] hover:text-deep transition'>
-                            Reserve a Table
-                          </button>
-                        </Link>
+                        <button
+                          onClick={() => {
+                            const element = document.getElementById('menu-section')
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                            }
+                          }}
+                          className='rounded-full bg-primary text-deep font-semibold px-8 py-3 border border-primary hover:bg-accent transition'>
+                          View Menu
+                        </button>
+                        <button
+                          onClick={() => {
+                            const element = document.getElementById('contact')
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                            }
+                          }}
+                          className='rounded-full border border-[#fef6da] text-[#fef6da] px-8 py-3 font-semibold hover:bg-[#fef6da] hover:text-deep transition'>
+                          Contact Us
+                        </button>
                       </div>
                     </div>
                   </div>

@@ -124,7 +124,11 @@ const Header: React.FC = () => {
           </Link>
           <nav className='flex flex-col items-start p-4'>
             {headerLink.map((item, index) => (
-              <MobileHeaderLink key={index} item={item} />
+              <MobileHeaderLink 
+                key={index} 
+                item={item} 
+                onLinkClick={() => setNavbarOpen(false)}
+              />
             ))}
           </nav>
         </div>

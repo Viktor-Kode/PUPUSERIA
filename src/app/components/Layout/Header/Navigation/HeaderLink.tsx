@@ -16,6 +16,17 @@ const HeaderLink: React.FC<{ item: HeaderItem; sticky: boolean }> = ({ item, sti
     setSubmenuOpen(false)
   }
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item.href.startsWith('/#')) {
+      e.preventDefault()
+      const targetId = item.href.substring(2)
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }
+
   console.log(path)
 
   return (
@@ -25,6 +36,7 @@ const HeaderLink: React.FC<{ item: HeaderItem; sticky: boolean }> = ({ item, sti
       onMouseLeave={handleMouseLeave}>
       <Link
         href={item.href}
+        onClick={handleClick}
         className={`text-lg flex font-medium duration-300  ${
           path === item.href
             ? sticky ? 'text-primary' : 'text-white'

@@ -7,8 +7,8 @@ import { FullMenuType } from '@/app/types/fullmenu'
 
 export const HeaderData: HeaderItem[] = [
   { label: 'About Us', href: '/#aboutus' },
-  { label: 'Menu', href: '/#menu' },
-  { label: 'Reserve Table', href: '/#reserve' },
+  { label: 'Menu', href: '/#menu-section' },
+  { label: 'Contact Us', href: '/#contact' },
 ]
 
 export const FeaturesData: FeaturesType[] = [
@@ -124,14 +124,15 @@ export const FullMenuData: FullMenuType[] = [
   },
   {
     name: 'Citrus Cured Hamachi',
-    style: 'Chef’s Selection',
+    style: "Chef's Selection",
     price: '$16.00',
     description:
       'Sustainably caught hamachi with charred orange, avocado purée, and yuzu kosho oil.',
+    dietary: ['chefs-pick', 'gluten-free', 'low-calorie'],
   },
   {
     name: 'Cold-Smoked Ribeye Taco',
-    style: 'Chef’s Selection',
+    style: "Chef's Selection",
     price: '$8.50',
     description:
       'Thin-sliced ribeye, black garlic salsa macha, and crispy shallots on nixtamalized tortillas.',
@@ -142,6 +143,7 @@ export const FullMenuData: FullMenuType[] = [
     price: '$12.00',
     description:
       'Crispy Brussels sprouts finished with tamarind piloncillo glaze, pepitas, and pickled red onion.',
+    dietary: ['vegan', 'gluten-free', 'nut-free'],
   },
   {
     name: 'Cacao Tres Leches',
@@ -149,27 +151,9 @@ export const FullMenuData: FullMenuType[] = [
     price: '$8.75',
     description:
       'Dark chocolate sponge soaked in tres leches with cinnamon chantilly and burnt sugar tuile.',
+    dietary: ['vegetarian'],
   },
 ]
 
-export const FooterLinkData: FooterLinkType[] = [
-  {
-    section: 'Templates',
-    links: [
-      { label: 'Landing Pages', href: '#' },
-      { label: 'Restaurant Kit', href: '#' },
-      { label: 'Contact', href: '#' },
-    ],
-  },
-  {
-    section: 'Resources',
-    links: [
-      { label: 'Brand Assets', href: '#' },
-      { label: 'Components', href: '#' },
-      { label: 'Changelog', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms & Conditions', href: '#' },
-    ],
-  },
-]
+export const FooterLinkData: FooterLinkType[] = []
 

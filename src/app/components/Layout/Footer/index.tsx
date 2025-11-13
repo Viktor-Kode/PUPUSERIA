@@ -12,103 +12,78 @@ const Footer: FC = () => {
   return (
     <footer className='pt-8'>
       <div className='container'>
-        <div className='grid grid-cols-1 sm:grid-cols-6 lg:gap-20 md:gap-24 sm:gap-12 gap-12 pb-10'>
-          <div className='col-span-2'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 pb-10'>
+          <div className='flex flex-col items-center'>
             <Logo sticky={true} />
-            <p className='text-sm font-medium text-grey my-5 max-w-70%'>
+            <p className='text-sm font-medium text-grey my-5 max-w-sm text-center'>
               A modern taco concept template built to showcase immersive dining
               experiences and chef-driven menus.
             </p>
-            <div className='flex gap-6 items-center'>
+            <div className='flex gap-4 items-center mt-6 justify-center'>
               <Link
                 href='#'
                 aria-label='Visit social profile'
-                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3'>
+                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3 transition-colors'>
                 <Icon
                   icon='fa6-brands:facebook-f'
                   width='16'
                   height='16'
-                  className=' group-hover:text-white text-black'
+                  className='group-hover:text-white text-black transition-colors'
                 />
               </Link>
               <Link
                 href='#'
                 aria-label='Visit social profile'
-                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3'>
+                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3 transition-colors'>
                 <Icon
                   icon='fa6-brands:instagram'
                   width='16'
                   height='16'
-                  className=' group-hover:text-white text-black'
+                  className='group-hover:text-white text-black transition-colors'
                 />
               </Link>
               <Link
                 href='#'
                 aria-label='Visit social profile'
-                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3'>
+                className='group bg-white hover:bg-primary rounded-full shadow-xl p-3 transition-colors'>
                 <Icon
                   icon='fa6-brands:x-twitter'
                   width='16'
                   height='16'
-                  className=' group-hover:text-white text-black'
+                  className='group-hover:text-white text-black transition-colors'
                 />
               </Link>
             </div>
           </div>
-          <div className='col-span-2'>
-            <div className='flex gap-20'>
-              {footerLinks.map((product, i) => (
-                <div key={i} className='group relative col-span-2'>
-                  <p className='text-black text-xl font-semibold mb-9'>
-                    {product.section}
-                  </p>
-                  <ul>
-                    {product.links.map((item, i) => (
-                      <li key={i} className='mb-3'>
-                        <Link
-                          href={item.href}
-                          className='text-black/60 hover:text-black text-base font-normal mb-6'>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className='col-span-2 sm:col-span-6 md:col-span-2'>
-            <div className='flex flex-col gap-5'>
-              <div className='flex'>
+          <div className='flex flex-col items-center'>
+            <h3 className='text-black text-xl font-semibold mb-6 text-center'>Contact Us</h3>
+            <div className='flex flex-col gap-6 items-center'>
+              <div className='flex items-center gap-3'>
                 <Icon
                   icon='solar:point-on-map-perspective-bold'
-                  className='text-primary text-3xl lg:text-2xl inline-block me-2'
+                  className='text-primary text-2xl flex-shrink-0'
                 />
-                <p className='text-black text-base'>
+                <p className='text-black text-base leading-relaxed text-center'>
                   Your Street Address, City, Country
                 </p>
               </div>
-              <Link href='tel:+10000000000'>
-                <div className='flex'>
-                  <Icon
-                    icon='solar:phone-bold'
-                    className='text-primary text-3xl lg:text-2xl inline-block me-2'
-                  />
-                  <p className='text-black/60 hover:text-black text-base'>
-                    +1 (000) 000-0000
-                  </p>
-                </div>
+              <Link href='tel:+10000000000' className='flex items-center gap-3 group'>
+                <Icon
+                  icon='solar:phone-bold'
+                  className='text-primary text-2xl flex-shrink-0'
+                />
+                <p className='text-black/60 group-hover:text-black text-base transition-colors text-center'>
+                  +1 (000) 000-0000
+                </p>
               </Link>
-              <Link href='mailto:hello@example.com'>
-                <div className='flex'>
-                  <Icon
-                    icon='solar:mailbox-bold'
-                    className='text-primary text-3xl lg:text-2xl inline-block me-2'
-                  />
-                  <p className='text-black/60 hover:text-black text-base'>
-                    hello@example.com
-                  </p>
-                </div>
+              <Link href='mailto:hello@example.com' className='flex items-center gap-3 group'>
+                <Icon
+                  icon='solar:mailbox-bold'
+                  className='text-primary text-2xl flex-shrink-0'
+                />
+                <p className='text-black/60 group-hover:text-black text-base transition-colors text-center'>
+                  hello@example.com
+                </p>
               </Link>
             </div>
           </div>
