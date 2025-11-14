@@ -33,6 +33,10 @@ const InteractiveMenu = () => {
     return FullMenuData.filter((item) => item.style === activeStyle)
   }, [activeStyle])
 
+  const handleRowClick = (itemName: string) => {
+    setExpandedItem(expandedItem === itemName ? null : itemName)
+  }
+
   // Get all unique dietary tags used in the menu items
   const usedDietaryTags = useMemo(() => {
     const allTags = new Set<DietaryTag>()
@@ -85,7 +89,7 @@ const InteractiveMenu = () => {
           })}
         </div>
 
-        <div className='rounded-[32px] border border-amber-500/60 bg-[#f5d77a] shadow-[0_45px_90px_-40px_rgba(150,105,20,0.55)]'>
+        <div className='rounded-[32px] border border-primary/60 bg-primary shadow-[0_45px_90px_-40px_rgba(224,193,118,0.55)]'>
           <div className='grid grid-cols-[2fr_1fr_auto] gap-4 px-8 py-5 text-left text-sm font-semibold uppercase text-deep/80'>
             <span>Name</span>
             <span className='text-center'>Style</span>
@@ -93,11 +97,15 @@ const InteractiveMenu = () => {
           </div>
           <div className='divide-y divide-white/30'>
             {filteredMenu.map((item) => {
+              const isExpanded = expandedItem === item.name
               return (
-                <div key={item.name} className='px-8 py-6'>
-                  <div className='grid grid-cols-[2fr_1fr_auto] items-start gap-4 text-[#2f2a1f]'>
-                    <div>
-                      <div className='flex items-center gap-2 flex-wrap'>
+                <div key={item.name}>
+                  <button
+                    type='button'
+                    onClick={() => handleRowClick(item.name)}
+                    className='w-full px-8 py-6 text-left transition hover:bg-white/20'>
+                    <div className='grid grid-cols-[2fr_1fr_auto] items-center gap-4 text-deep'>
+                      <div>
                         <p className='text-lg font-semibold'>
                           {item.name}
                         </p>
@@ -123,19 +131,30 @@ const InteractiveMenu = () => {
                           </div>
                         )}
                       </div>
-                      <p className='mt-2 text-sm text-[#2f2a1f]/80 leading-6'>
-                        {item.description}
+                      <p className='text-center text-sm font-medium text-deep/80'>
+                        {item.style}
                       </p>
+                      <div className='flex items-center justify-end gap-3'>
+                        <span className='text-base font-semibold text-deep'>
+                          {item.price}
+                        </span>
+                        <span
+                          aria-hidden
+                          className={`h-7 w-7 rounded-full border border-white/40 flex items-center justify-center text-sm transition ${
+                            isExpanded
+                              ? 'bg-secondary text-deep shadow-lg'
+                              : 'bg-white/20 text-deep/80'
+                          }`}>
+                          {isExpanded ? '−' : '+'}
+                        </span>
+                      </div>
                     </div>
-                    <p className='text-center text-sm font-medium text-[#2f2a1f]/80'>
-                      {item.style}
-                    </p>
-                    <div className='flex items-center justify-end'>
-                      <span className='text-base font-semibold text-[#2f2a1f]'>
-                        {item.price}
-                      </span>
+                  </button>
+                  {isExpanded && (
+                    <div className='px-8 pb-6 text-deep/90 text-sm leading-6 bg-secondary/50 rounded-b-[28px] border-t border-white/25'>
+                      {item.description}
                     </div>
-                  </div>
+                  )}
                 </div>
               )
             })}

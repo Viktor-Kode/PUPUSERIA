@@ -47,7 +47,7 @@ const ContactForm = () => {
   })
 
   const fieldClass =
-    'w-full text-base px-5 rounded-2xl py-3 border border-[#f1e8c9] bg-white shadow-[0_18px_35px_-20px_rgba(47,42,31,0.35)] transition-colors duration-300 focus:border-primary focus:ring-2 focus:ring-primary/25 focus:outline-none'
+    'w-full text-base px-5 rounded-2xl py-3 border border-secondary bg-white shadow-[0_18px_35px_-20px_rgba(47,42,31,0.35)] transition-colors duration-300 focus:border-primary focus:ring-2 focus:ring-primary/25 focus:outline-none'
 
   const onSubmit = async (data: ContactForm) => {
     try {
@@ -76,7 +76,7 @@ const ContactForm = () => {
         <h2 className='mb-9 font-bold tracking-tight text-center'>
           Get In Touch
         </h2>
-        <div className='relative border border-[#f1e8c9] bg-[#fef6da] px-6 py-6 rounded-3xl shadow-[0_28px_60px_-40px_rgba(47,42,31,0.45)]'>
+        <div className='relative border border-secondary bg-secondary px-6 py-6 rounded-3xl shadow-[0_28px_60px_-40px_rgba(47,42,31,0.45)]'>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className='flex flex-wrap w-full m-auto justify-between'
