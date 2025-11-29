@@ -7,12 +7,15 @@ import HeaderLink from './Navigation/HeaderLink'
 import MobileHeaderLink from './Navigation/MobileHeaderLink'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { HeaderData } from '@/data/siteContent'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useI18n } from '@/i18n/client'
 
 const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
 
   const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const { t } = useI18n()
 
   const headerLink = HeaderData
 
@@ -63,24 +66,25 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className='flex items-center gap-2 lg:gap-3'>
+            <LanguageSwitcher sticky={sticky} />
             <Link
               href='tel:+10000000000'
               className={`text-lg font-medium hidden xl:block transition-colors duration-300 ${
                 sticky ? 'text-black hover:text-primary' : 'text-white hover:text-white/80'
               }`}
-              aria-label='Call our reservations team at +1 (000) 000-0000'>
+              aria-label={t('common.callReservations')}>
               <Icon
                 icon='solar:phone-bold'
                 className={`text-3xl lg:text-2xl inline-block me-2 transition-colors duration-300 ${
                   sticky ? 'text-primary' : 'text-white'
                 }`}
               />
-              +1 (000) 000-0000
+              {t('common.phone')}
             </Link>
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className='block lg:hidden p-2 rounded-lg'
-              aria-label='Toggle mobile menu'>
+              aria-label={t('common.toggleMenu')}>
               <span className={`block w-6 h-0.5 transition-colors duration-300 ${sticky ? 'bg-black' : 'bg-white'}`}></span>
               <span className={`block w-6 h-0.5 mt-1.5 transition-colors duration-300 ${sticky ? 'bg-black' : 'bg-white'}`}></span>
               <span className={`block w-6 h-0.5 mt-1.5 transition-colors duration-300 ${sticky ? 'bg-black' : 'bg-white'}`}></span>
@@ -103,7 +107,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setNavbarOpen(false)}
               className="hover:cursor-pointer"
-              aria-label='Close menu Modal'>
+              aria-label={t('common.closeMenu')}>
               <Icon
                 icon='material-symbols:close-rounded'
                 width={24}
@@ -112,16 +116,19 @@ const Header: React.FC = () => {
               />
             </button>
           </div>
-          <Link
-            href='tel:+10000000000'
-            className='text-lg font-medium hover:text-primary block md:hidden mt-6 p-4'
-            aria-label='Call our reservations team at +1 (000) 000-0000'>
-            <Icon
-              icon='solar:phone-bold'
-              className='text-primary text-3xl lg:text-2xl inline-block me-2'
-            />
-            +1 (000) 000-0000
-          </Link>
+          <div className='flex items-center justify-between px-4 mt-6'>
+            <Link
+              href='tel:+10000000000'
+              className='text-lg font-medium hover:text-primary block md:hidden'
+              aria-label={t('common.callReservations')}>
+              <Icon
+                icon='solar:phone-bold'
+                className='text-primary text-3xl lg:text-2xl inline-block me-2'
+              />
+              {t('common.phone')}
+            </Link>
+            <LanguageSwitcher sticky={true} />
+          </div>
           <nav className='flex flex-col items-start p-4'>
             {headerLink.map((item, index) => (
               <MobileHeaderLink 

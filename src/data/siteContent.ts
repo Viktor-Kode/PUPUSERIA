@@ -5,36 +5,36 @@ import { GalleryImagesType } from '@/app/types/galleryimage'
 import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 
+// Header labels are now translated in components using translation keys:
+// 'nav.aboutUs', 'nav.menu', 'nav.contactUs'
 export const HeaderData: HeaderItem[] = [
-  { label: 'About Us', href: '/#aboutus' },
-  { label: 'Menu', href: '/#menu-section' },
-  { label: 'Contact Us', href: '/#contact' },
+  { label: 'nav.aboutUs', href: '/#aboutus' },
+  { label: 'nav.menu', href: '/#menu-section' },
+  { label: 'nav.contactUs', href: '/#contact' },
 ]
 
+// Feature labels are now translated in components using translation keys:
+// 'features.feature1.heading', 'features.feature1.subheading', etc.
 export const FeaturesData: FeaturesType[] = [
   {
     imgSrc: '/images/Features/featureOne.svg',
-    heading: 'Elegant Dining Atmosphere',
-    subheading:
-      'Enjoy a warm, refined space perfect for intimate dinners or small group gatherings.',
+    heading: 'features.feature1.heading',
+    subheading: 'features.feature1.subheading',
   },
   {
     imgSrc: '/images/Features/featureThree.svg',
-    heading: 'Signature Chef Creations',
-    subheading:
-      'Taste one-of-a-kind dishes crafted with passion by our top culinary team.',
+    heading: 'features.feature2.heading',
+    subheading: 'features.feature2.subheading',
   },
   {
     imgSrc: '/images/Features/featureTwo.svg',
-    heading: 'Fresh, Local Ingredients',
-    subheading:
-      'We use locally sourced goods daily for unmatched taste and quality.',
+    heading: 'features.feature3.heading',
+    subheading: 'features.feature3.subheading',
   },
   {
     imgSrc: '/images/Features/featureFour.svg',
-    heading: 'Hassle-Free Reservations',
-    subheading:
-      'Reserve online in seconds or walk in anytime — we’re ready when you are.',
+    heading: 'features.feature4.heading',
+    subheading: 'features.feature4.subheading',
   },
 ]
 

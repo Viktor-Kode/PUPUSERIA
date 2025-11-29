@@ -1,8 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import { useI18n } from '@/i18n/client'
 
 const Cook = () => {
+  const { t } = useI18n()
+
   return (
     <section className='relative bg-secondary' id='aboutus'>
       <div className='container px-4'>
@@ -17,21 +20,16 @@ const Cook = () => {
           </div>
           <div className='lg:col-span-6 flex flex-col justify-start items-center lg:items-start relative z-10'>
             <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase lg:text-start text-center'>
-              About Us
+              {t('about.title')}
             </p>
             <h2 className='lg:text-start text-center'>
-              Crafted with Passion, Served with Pride
+              {t('about.heading')}
             </h2>
             <p className='text-deep/70 text-lg font-normal my-5 text-start'>
-              At Freddys Tacos, each tortilla is pressed to order and every
-              smoky bite nods to the mercados that inspired us. We char, braise,
-              and slow-roast with intention—bringing the soul of Mexican street
-              food into an intimate, modern cantina.
+              {t('about.paragraph1')}
             </p>
             <p className='text-deep/70 text-lg font-normal mb-10 text-start'>
-              Whether you're celebrating a special occasion or enjoying a casual
-              evening out, our welcoming ambiance and flavorful creations
-              promise something truly special for every guest.
+              {t('about.paragraph2')}
             </p>
           </div>
         </div>

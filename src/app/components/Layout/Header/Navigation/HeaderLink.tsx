@@ -3,10 +3,12 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { HeaderItem } from '../../../../types/menu'
 import { usePathname } from 'next/navigation'
+import { useI18n } from '@/i18n/client'
 
 const HeaderLink: React.FC<{ item: HeaderItem; sticky: boolean }> = ({ item, sticky }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false)
   const path = usePathname()
+  const { t } = useI18n()
   const handleMouseEnter = () => {
     if (item.submenu) {
       setSubmenuOpen(true)
@@ -42,7 +44,7 @@ const HeaderLink: React.FC<{ item: HeaderItem; sticky: boolean }> = ({ item, sti
             ? sticky ? 'text-primary' : 'text-white'
             : sticky ? 'text-black/50 hover:text-primary' : 'text-white hover:text-white/80'
         }`}>
-        {item.label}
+        {t(item.label)}
         {item.submenu && (
           <svg
             xmlns='http://www.w3.org/2000/svg'

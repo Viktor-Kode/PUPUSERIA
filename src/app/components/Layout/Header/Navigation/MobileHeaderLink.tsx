@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { HeaderItem } from "../../../../types/menu";
+import { useI18n } from '@/i18n/client';
 
 interface MobileHeaderLinkProps {
   item: HeaderItem;
@@ -10,6 +11,7 @@ interface MobileHeaderLinkProps {
 
 const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({ item, onLinkClick }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const { t } = useI18n();
 
   const handleToggle = () => {
     setSubmenuOpen(!submenuOpen);
@@ -49,7 +51,7 @@ const MobileHeaderLink: React.FC<MobileHeaderLinkProps> = ({ item, onLinkClick }
         onClick={handleClick}
         className="flex items-center justify-between w-full py-2 text-muted focus:outline-hidden"
       >
-        {item.label}
+        {t(item.label)}
         {item.submenu && (
           <svg
             xmlns="http://www.w3.org/2000/svg"

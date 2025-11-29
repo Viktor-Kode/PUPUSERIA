@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { FullMenuData } from '@/data/siteContent'
 import { DietaryIcon, DietaryTag, DietaryLegend } from '@/components/dietary'
 import { DietaryType } from '@/app/components/Common/DietaryIcons'
+import { useI18n } from '@/i18n/client'
 
 // Helper function to map old dietary types to new dietary tags
 const mapDietaryTypeToTag = (oldType: DietaryType): DietaryTag | null => {
@@ -19,7 +20,9 @@ const mapDietaryTypeToTag = (oldType: DietaryType): DietaryTag | null => {
 }
 
 const InteractiveMenu = () => {
+  const { t } = useI18n()
   const [activeStyle, setActiveStyle] = useState<string>('All')
+  const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   const styles = useMemo(() => {
     const uniqueStyles = Array.from(
@@ -58,13 +61,11 @@ const InteractiveMenu = () => {
       <div className='container'>
         <div className='text-center mb-12'>
           <p className='text-primary text-lg font-normal tracking-widest uppercase'>
-            Tasting Menu
+            {t('menu.title')}
           </p>
-          <h2 className='mt-3'>Explore the Current Lineup</h2>
+          <h2 className='mt-3'>{t('menu.subtitle')}</h2>
           <p className='text-deep/70 max-w-2xl mx-auto mt-4'>
-            Filter by style to explore Freddys latest tacos, small bites, and
-            sweet finishes. Tap a row to reveal the chef&apos;s notes for each
-            dish.
+            {t('menu.description')}
           </p>
         </div>
 
@@ -91,9 +92,9 @@ const InteractiveMenu = () => {
 
         <div className='rounded-[32px] border border-primary/60 bg-primary shadow-[0_45px_90px_-40px_rgba(224,193,118,0.55)]'>
           <div className='grid grid-cols-[2fr_1fr_auto] gap-4 px-8 py-5 text-left text-sm font-semibold uppercase text-deep/80'>
-            <span>Name</span>
-            <span className='text-center'>Style</span>
-            <span className='text-right'>Price</span>
+            <span>{t('menu.headers.name')}</span>
+            <span className='text-center'>{t('menu.headers.style')}</span>
+            <span className='text-right'>{t('menu.headers.price')}</span>
           </div>
           <div className='divide-y divide-white/30'>
             {filteredMenu.map((item) => {

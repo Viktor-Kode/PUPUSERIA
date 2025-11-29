@@ -1,8 +1,10 @@
 'use client'
 import Image from 'next/image'
 import { FeaturesData } from '@/data/siteContent'
+import { useI18n } from '@/i18n/client'
 
 const Features = () => {
+  const { t } = useI18n()
   const features = FeaturesData
 
   return (
@@ -10,10 +12,10 @@ const Features = () => {
       <div className='container'>
         <div className='text-center mb-14'>
           <p className='text-primary text-lg font-normal tracking-widest uppercase'>
-            Why Choose Us
+            {t('features.title')}
           </p>
           <h2 className='font-semibold lg:max-w-60% mx-auto mt-3'>
-            Experience More Than Just a Meal
+            {t('features.subtitle')}
           </h2>
         </div>
         <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-28 gap-x-6 mt-24'>
@@ -30,10 +32,10 @@ const Features = () => {
                 />
               </div>
               <p className='text-2xl text-black font-semibold text-center mt-16'>
-                {items.heading}
+                {t(items.heading)}
               </p>
               <p className='text-base font-normal text-black/50 text-center mt-2 leading-6'>
-                {items.subheading}
+                {t(items.subheading)}
               </p>
             </div>
           ))}
