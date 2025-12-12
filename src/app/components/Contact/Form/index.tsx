@@ -85,7 +85,7 @@ const ContactForm = () => {
         <h2 className='mb-9 font-bold tracking-tight text-center'>
           {t('contact.heading')}
         </h2>
-        <div className='relative border border-secondary bg-secondary px-6 py-6 rounded-3xl shadow-[0_28px_60px_-40px_rgba(47,42,31,0.45)]'>
+        <div className='relative border border-primary/60 bg-primary px-6 py-6 rounded-3xl shadow-[0_45px_90px_-40px_rgba(224,193,118,0.55)]'>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className='flex flex-wrap w-full m-auto justify-between'
