@@ -56,8 +56,8 @@ const Header: React.FC = () => {
         sticky ? 'shadow-lg bg-white' : 'shadow-none'
       }`}>
       <div>
-        <div className='container flex items-center justify-between'>
-          <div>
+        <div className='container flex items-center justify-between gap-2'>
+          <div className='min-w-0 flex-shrink'>
             <Logo sticky={sticky} />
           </div>
           <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-center'>
