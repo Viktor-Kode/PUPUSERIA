@@ -9,7 +9,7 @@ const Logo: React.FC<{ sticky: boolean }> = ({ sticky }) => {
         alt='logo'
         width={117}
         height={34}
-        className='w-auto h-9 sm:h-10 md:h-11 lg:h-12 xl:h-14 flex-shrink-0'
+        className='w-fit h-9 sm:h-10 md:h-11 lg:h-12 xl:h-14 flex-shrink-0'
         quality={100}
         priority
       />
