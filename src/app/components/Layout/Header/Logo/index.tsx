@@ -14,8 +14,8 @@ const Logo: React.FC<{ sticky: boolean }> = ({ sticky }) => {
         priority
       />
       <p className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold transition-colors duration-300 whitespace-nowrap ${
-        sticky ? 'text-primary' : 'text-white'
-      }`}>Freddys Tacos</p>
+        sticky ? 'text-blue-500' : 'text-white'
+      }`}>Pupusería Mi Bendición</p>
     </Link>
   )
 }

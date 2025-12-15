@@ -17,7 +17,7 @@ export const exportMenuPdf = (menu: FullMenuType[]) => {
 
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(24)
-  doc.text("Freddys Tacos Menu", marginX, cursorY)
+  doc.text("Pupusería Mi Bendición Menu", marginX, cursorY)
 
   doc.setFontSize(11)
   doc.setFont('helvetica', 'normal')
@@ -197,6 +197,6 @@ export const exportMenuPdf = (menu: FullMenuType[]) => {
     })
   }
 
-  doc.save('freddys-tacos-menu.pdf')
+  doc.save('Pupusería-Mi-Bendición-menu.pdf')
 }
 

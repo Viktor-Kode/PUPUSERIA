@@ -1,27 +1,27 @@
 /**
- * Dietary tag types for menu items
+ * Dietary tags used to describe menu items.
+ * Tags represent suitability, not guarantees.
+ * Some items may depend on preparation or vendor confirmation.
  */
 export type DietaryTag =
   | 'vegan'
   | 'vegetarian'
-  | 'spicy'
+  | 'containsDairy'
+  | 'containsEgg'
+  | 'containsMeat'
+  | 'containsShellfish'
   | 'glutenFree'
-  | 'dairyFree'
-  | 'nutFree'
-  | 'eggFree'
-  | 'fishFree'
-  | 'shellfishFree'
-  | 'soyFree'
+  | 'glutenFreeOptional'
+  | 'spicy'
 
 /**
- * Props for the DietaryIcon component
+ * Props for displaying a dietary indicator icon
  */
 export interface DietaryIconProps {
-  /** The dietary tag to display */
+  /** Dietary tag to render */
   tag: DietaryTag
-  /** Optional size in pixels (default: 18) */
+  /** Icon size in pixels (default: 18) */
   size?: number
-  /** Optional className for styling (e.g., Tailwind classes) */
+  /** Optional styling classes */
   className?: string
 }
-

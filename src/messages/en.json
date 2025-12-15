@@ -1,110 +1,109 @@
 {
   "nav": {
-    "aboutUs": "About Us",
+    "aboutUs": "Our Story",
     "menu": "Menu",
     "contactUs": "Contact Us"
   },
   "hero": {
-    "cantina": "Freddys Tacos Cantina",
+    "cantina": "Pupusería Mi Bendición",
     "slides": {
       "slide1": {
-        "title": "Freddys Tacos After Dark",
-        "description": "Step into our flagship taquería and savor chef-driven tacos fired over mesquite flames, paired with house-crafted agave cocktails."
+        "title": "Auténtico Sabor Salvadoreño",
+        "description": "Experience the true taste of El Salvador with our handmade pupusas, crafted from fresh masa and filled with wholesome ingredients, served with our signature curtido."
       },
       "slide2": {
-        "title": "Seasonal Comal Creations",
-        "description": "Our kitchen reimagines regional Mexican staples with market produce, masa ground in-house, and bold street-food energy."
+        "title": "Cocina de la Abuela",
+        "description": "Every dish follows generations-old family recipes, prepared with the same love and care that nourished our ancestors. This is comida con bendición."
       },
       "slide3": {
-        "title": "Tasting Flights & Agave Pairings",
-        "description": "Reserve an experience featuring curated taco flights, ceviche pairings, and rare mezcals sourced directly from Oaxaca."
+        "title": "Rico y Saludable",
+        "description": "Savor the balance of delicious and wholesome. Our kitchen emphasizes fresh vegetables, locally sourced proteins, and traditional preparation methods for nourishing meals."
       }
     },
-    "viewMenu": "View Menu",
-    "contactUs": "Contact Us"
+    "viewMenu": "View Our Menu",
+    "contactUs": "Visit Us"
   },
   "menu": {
-    "title": "Tasting Menu",
-    "subtitle": "Explore the Current Lineup",
-    "description": "Filter by style to explore Freddys latest tacos, small bites, and sweet finishes. Tap a row to reveal the chef's notes for each dish.",
+    "title": "Nuestra Cocina",
+    "subtitle": "Comida Hecha con Amor",
+    "description": "Browse our selection of traditional Salvadoran dishes made with fresh, wholesome ingredients. Each item is prepared daily with care and authenticity.",
     "headers": {
-      "name": "Name",
-      "style": "Style",
+      "name": "Dish",
+      "style": "Type",
       "price": "Price"
     }
   },
   "features": {
-    "title": "Why Choose Us",
-    "subtitle": "Experience More Than Just a Meal",
+    "title": "Nuestra Promesa",
+    "subtitle": "Más Que Solo Comida",
     "feature1": {
-      "heading": "Elegant Dining Atmosphere",
-      "subheading": "Enjoy a warm, refined space perfect for intimate dinners or small group gatherings."
+      "heading": "Ingredientes Frescos y Locales",
+      "subheading": "We source fresh produce and quality ingredients daily, supporting local farms for the most vibrant flavors."
     },
     "feature2": {
-      "heading": "Signature Chef Creations",
-      "subheading": "Taste one-of-a-kind dishes crafted with passion by our top culinary team."
+      "heading": "Tradición Familiar",
+      "subheading": "Every recipe comes from generations of family tradition, prepared with the authentic techniques of Salvadoran home cooking."
     },
     "feature3": {
-      "heading": "Fresh, Local Ingredients",
-      "subheading": "We use locally sourced goods daily for unmatched taste and quality."
+      "heading": "Opciones Saludables",
+      "subheading": "Enjoy our selection of vegetarian, vegan, and gluten-free options, all made with the same care as our traditional dishes."
     },
     "feature4": {
-      "heading": "Hassle-Free Reservations",
-      "subheading": "Reserve online in seconds or walk in anytime — we're ready when you are."
+      "heading": "Ambiente Acogedor",
+      "subheading": "Relax in our warm, welcoming space that feels like home—perfect for family meals and friendly gatherings."
     }
   },
   "about": {
-    "title": "About Us",
-    "heading": "Crafted with Passion, Served with Pride",
-    "paragraph1": "At Freddys Tacos, each tortilla is pressed to order and every smoky bite nods to the mercados that inspired us. We char, braise, and slow-roast with intention—bringing the soul of Mexican street food into an intimate, modern cantina.",
-    "paragraph2": "Whether you're celebrating a special occasion or enjoying a casual evening out, our welcoming ambiance and flavorful creations promise something truly special for every guest."
+    "title": "Nuestra Filosofía",
+    "heading": "Hecho a Mano con Corazón, Elaborado con Cuidado",
+    "paragraph1": "At Pupusería Mi Bendición, every dish begins with our commitment to 'Rico y Saludable'—delicious and healthy. We believe authentic flavor comes from respecting ingredients in their purest form. That's why we source fresh, local produce and prepare everything from scratch, just as our abuelas taught us.",
+    "paragraph2": "Our kitchen is where tradition meets nourishment. From stone-ground masa to garden-fresh fillings, we craft each pupusa with mindful ingredients and generations of Salvadoran love. This isn't just food; it's comida con bendición—a wholesome blessing for your table."
   },
   "contact": {
-    "title": "Contact Us",
-    "heading": "Get In Touch",
+    "title": "Visítanos",
+    "heading": "Bienvenidos a Nuestra Mesa",
     "form": {
-      "fullName": "Full Name",
+      "fullName": "Your Name",
       "email": "Email Address",
       "phone": "Phone Number (Optional)",
-      "message": "Message",
-      "submit": "Submit",
-      "submitting": "Submitting...",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
       "placeholders": {
-        "fullName": "John Doe",
-        "email": "john.doe@example.com",
-        "phone": "+1234567890",
-        "message": "How can we help you?"
+        "fullName": "Maria García",
+        "email": "maria@example.com",
+        "phone": "+1 (555) 123-4567",
+        "message": "Questions about our menu, catering, or hours?"
       }
     },
     "validation": {
-      "fullNameMin": "Full name must be at least 2 characters.",
-      "fullNameMax": "Full name is too long.",
-      "emailInvalid": "Enter a valid email address.",
-      "phoneInvalid": "Enter a valid phone number.",
-      "messageMin": "Please let us know how we can help you.",
+      "fullNameMin": "Please enter your name.",
+      "fullNameMax": "Name is too long.",
+      "emailInvalid": "Please enter a valid email address.",
+      "phoneInvalid": "Please enter a valid phone number.",
+      "messageMin": "Please tell us how we can help you.",
       "messageMax": "Message is too long."
     },
     "messages": {
-      "success": "We received your message. We will get back to you soon!",
-      "error": "We could not send your message. Please try again.",
-      "thanks": "Thanks! We received your message and will get back to you soon."
+      "success": "¡Gracias! We received your message and will respond soon.",
+      "error": "Something went wrong. Please try again.",
+      "thanks": "¡Gracias por contactarnos! We'll be in touch soon."
     }
   },
   "footer": {
-    "description": "A modern taco concept template built to showcase immersive dining experiences and chef-driven menus.",
-    "contactUs": "Contact Us",
-    "address": "Your Street Address, City, Country",
-    "copyright": "© {year} Freddys Tacos Template. All rights reserved.",
+    "description": "Pupusería Mi Bendición brings authentic Salvadoran flavors with a focus on fresh, wholesome ingredients. Experience comida con bendición—food prepared with love and care.",
+    "contactUs": "Visit or Call",
+    "address": "Your Street Address, City, State ZIP",
+    "copyright": "© {year} Pupusería Mi Bendición. All rights reserved.",
     "social": {
-      "visitProfile": "Visit social profile"
+      "visitProfile": "Follow us on social media"
     }
   },
   "common": {
     "home": "Home",
-    "phone": "+1 (000) 000-0000",
-    "callReservations": "Call our reservations team at +1 (000) 000-0000",
-    "toggleMenu": "Toggle mobile menu",
-    "closeMenu": "Close menu Modal"
+    "phone": "+1 (555) 123-4567",
+    "callReservations": "For questions or catering: +1 (555) 123-4567",
+    "toggleMenu": "Toggle navigation menu",
+    "closeMenu": "Close menu"
   }
 }
-

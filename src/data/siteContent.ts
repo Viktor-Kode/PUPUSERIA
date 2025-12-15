@@ -59,101 +59,172 @@ export const ExpertChiefData: ExpertChiefType[] = [
 export const GalleryImagesData: GalleryImagesType[] = [
   {
     src: '/images/Gallery/gallery-01.png',
-    name: 'Charred Salmon Citrus Glaze',
-    price: 35,
+    name: 'Fresh Pupusa Preparation',
+    price: 0,
   },
   {
     src: '/images/Gallery/gallery-02.png',
-    name: 'Heirloom Tomato Burrata',
-    price: 27,
+    name: 'Handmade Traditional Pupusas',
+    price: 0,
   },
   {
     src: '/images/Gallery/gallery-03.png',
-    name: 'Truffle Mushroom Tartine',
-    price: 45,
+    name: 'Organic Ingredients Selection',
+    price: 0,
   },
   {
     src: '/images/Gallery/gallery-04.png',
-    name: 'Seasonal Fruit Mille-feuille',
-    price: 29,
+    name: 'Salvadoran Breakfast Spread',
+    price: 0,
   },
 ]
 
 export const FullMenuData: FullMenuType[] = [
+  // Pupusas
   {
-    name: 'Mesquite Al Pastor',
-    style: 'Signature Taco',
-    price: '$6.75',
-    description:
-      'Charred pork shoulder shaved fresh off the trompo, grilled pineapple, and cilantro-lime salsa on blue corn tortillas.',
+    name: 'Pupusa Revuelta',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'The classic favorite, packed with hearty flavor. Made with fresh masa (whole corn), slow-cooked beans, savory cheese, and seasoned pork (chicharrón).',
+    dietary: ['containsMeat', 'containsDairy'],
   },
   {
-    name: 'Braised Birria Dipper',
-    style: 'Signature Taco',
-    price: '$7.25',
-    description:
-      'Slow-braised beef folded with Oaxacan cheese, served with a rich consommé for dipping.',
+    name: 'Pupusa de Frijol y Queso',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'Simple, comforting, and perfectly balanced. Fresh masa with our signature creamy beans and melted Salvadoran cheese.',
+    dietary: ['vegetarian', 'containsDairy'],
   },
   {
-    name: 'Crispy Baja Fish',
-    style: 'Seafood Taco',
-    price: '$6.95',
-    description:
-      'Beer-battered halibut, shaved cabbage, smoked chili crema, and charred lime on flour tortillas.',
+    name: 'Pupusa de Chicharrón y Queso',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'A savory union of traditional flavors. Fresh masa, seasoned pork (chicharrón), and melted cheese.',
+    dietary: ['containsMeat', 'containsDairy'],
   },
   {
-    name: 'Tejano Carne Asada',
-    style: 'Plates',
-    price: '$22.00',
-    description:
-      'Grilled skirt steak finished with roasted bone marrow butter, served with black bean purée and warm tortillas.',
+    name: 'Pupusa de Espinaca y Queso',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'Garden-fresh spinach paired with creamy cheese. Made with fresh masa and tender spinach leaves.',
+    dietary: ['vegetarian', 'containsDairy'],
   },
   {
-    name: 'Esquites Street Corn',
-    style: 'Shareable',
-    price: '$9.50',
-    description:
-      'Roasted white corn tossed with jalapeño aioli, cotija crumble, and crispy hoja santa.',
+    name: 'Pupusa de Ayote y Queso',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'Featuring tender zucchini for a light, satisfying bite. Made with locally-sourced zucchini and fresh masa.',
+    dietary: ['vegetarian', 'containsDairy'],
   },
   {
-    name: 'Charred Nopales Salad',
-    style: 'Shareable',
-    price: '$11.00',
-    description:
-      'Grilled cactus paddles, heirloom tomatoes, queso fresco, and citrus vinaigrette.',
+    name: 'Pupusa de Loroco y Queso',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'A taste of Central America with the unique, floral loroco flower. Fresh masa with fragrant loroco buds.',
+    dietary: ['vegetarian', 'containsDairy'],
   },
   {
-    name: 'Citrus Cured Hamachi',
-    style: "Chef's Selection",
-    price: '$16.00',
-    description:
-      'Sustainably caught hamachi with charred orange, avocado purée, and yuzu kosho oil.',
-    dietary: ['chefs-pick', 'gluten-free', 'low-calorie'],
+    name: 'Pupusa Vegana',
+    style: 'Pupusas',
+    price: '$5.10',
+    description: 'Our wholesome plant-based creation, bursting with garden flavors. Gluten-free corn masa with spinach, beans, loroco, cauliflower, and premium vegan cheese.',
+    dietary: ['vegan', 'vegetarian', 'glutenFreeOptional'],
   },
   {
-    name: 'Cold-Smoked Ribeye Taco',
-    style: "Chef's Selection",
-    price: '$8.50',
-    description:
-      'Thin-sliced ribeye, black garlic salsa macha, and crispy shallots on nixtamalized tortillas.',
+    name: 'Pupusa de Jalapeño y Queso',
+    style: 'Pupusas',
+    price: '$4.10',
+    description: 'For those who love a spirited kick of fresh jalapeño. Hand-sliced jalapeños with fresh masa and cheese.',
+    dietary: ['vegetarian', 'containsDairy', 'spicy'],
   },
   {
-    name: 'Tamarind Glazed Brussels',
-    style: 'Plant-Based',
-    price: '$12.00',
-    description:
-      'Crispy Brussels sprouts finished with tamarind piloncillo glaze, pepitas, and pickled red onion.',
-    dietary: ['vegan', 'gluten-free', 'nut-free'],
+    name: 'Pupusa de Camarón y Queso',
+    style: 'Pupusas',
+    price: '$5.10',
+    description: 'A coastal twist on the traditional pupusa. Fresh masa with succulent shrimp and Salvadoran cheese.',
+    dietary: ['containsShellfish', 'containsDairy'],
+  },
+  // Sides
+  {
+    name: 'Frijoles Salvadoreños',
+    style: 'Sides',
+    price: '$4.00',
+    description: 'Slow-simmered beans with a fresh tomato, green chile, and onion salsa.',
+    dietary: ['vegan', 'vegetarian', 'glutenFreeOptional'],
   },
   {
-    name: 'Cacao Tres Leches',
-    style: 'Dessert',
-    price: '$8.75',
-    description:
-      'Dark chocolate sponge soaked in tres leches with cinnamon chantilly and burnt sugar tuile.',
+    name: 'Canoas de Plátano',
+    style: 'Sides',
+    price: '$5.50',
+    description: 'Sweet, ripe plantains baked to caramelized perfection. A naturally gluten-free delight.',
     dietary: ['vegetarian'],
+  },
+  {
+    name: 'Empanadas de Plátano',
+    style: 'Sides',
+    price: '$5.50',
+    description: 'A sweet dessert empanada filled with our spiced bean paste and fried to perfection.',
+    dietary: ['vegetarian'],
+  },
+  {
+    name: 'Arroz Salvadoreño',
+    style: 'Sides',
+    price: '$3.50',
+    description: 'A simple, flavorful side of steamed rice with a hint of onion.',
+    dietary: ['vegan', 'vegetarian', 'glutenFreeOptional'],
+  },
+  // Plates
+  {
+    name: 'Pan con Pollo Salvadoreño',
+    style: 'Plates',
+    price: '$13.99',
+    description: 'A vibrant, loaded sandwich celebrating fresh textures and flavors. Fresh bolillo bread with shredded chicken, vegetables, and house sauce.',
+    dietary: ['containsMeat'],
+  },
+  {
+    name: 'Desayuno Tradicional Ligero',
+    style: 'Plates',
+    price: '$12.99',
+    description: 'A lighter, wholesome start to your day. Savory beans, two eggs your way, sweet fried plantains, and fresh curtido.',
+    dietary: ['vegetarian', 'containsEgg'],
+  },
+  {
+    name: 'Desayuno Típico Salvadoreño',
+    style: 'Plates',
+    price: '$14.99',
+    description: 'The hearty, classic Salvadoran breakfast plate. Beans, plantains, your choice of chorizo or longaniza, and warm tortillas.',
+    dietary: ['containsMeat'],
+  },
+  // Specialties
+  {
+    name: 'Chiles Rellenos con Carne',
+    style: 'Specialties',
+    price: '$15.99',
+    description: 'Poblano chiles stuffed with seasoned ground beef, in a rich tomato-egg sauce.',
+    dietary: ['containsMeat', 'containsEgg', 'spicy'],
+  },
+  {
+    name: 'Chiles Rellenos con Queso',
+    style: 'Specialties',
+    price: '$14.99',
+    description: 'A vegetarian delight of cheese-stuffed poblano chiles in a savory tomato sauce.',
+    dietary: ['vegetarian', 'containsDairy', 'containsEgg', 'spicy'],
+  },
+  // Drinks
+  {
+    name: 'Horchata Salvadoreña',
+    style: 'Drinks',
+    price: '$4.50',
+    description: 'Our refreshing, fruity interpretation of the classic drink. Made with fresh pineapple, hibiscus, and organic cane sugar.',
+    dietary: ['vegan', 'vegetarian', 'glutenFreeOptional'],
+  },
+  {
+    name: 'Atole de Piña',
+    style: 'Drinks',
+    price: '$4.50',
+    description: 'A warm, comforting pineapple and plantain drink, lightly spiced with cloves.',
+    dietary: ['vegetarian', 'glutenFreeOptional'],
   },
 ]
 
 export const FooterLinkData: FooterLinkType[] = []
-

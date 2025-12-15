@@ -1,20 +1,25 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { FullMenuData } from '@/data/siteContent'
+import { FullMenuData } from '@/data/siteContent' // Import from centralized data
 import { DietaryIcon, DietaryTag, DietaryLegend } from '@/components/dietary'
-import { DietaryType } from '@/app/components/Common/DietaryIcons'
 import { useI18n } from '@/i18n/client'
 
-// Helper function to map old dietary types to new dietary tags
-const mapDietaryTypeToTag = (oldType: DietaryType): DietaryTag | null => {
+// Updated mapping from dietary array items to DietaryTag
+// Based on the dietary tags used in siteContent.ts
+// Updated mapping from dietary array items to DietaryTag
+const mapDietaryTypeToTag = (oldType: string): DietaryTag | null => {
   const mapping: Record<string, DietaryTag> = {
     'vegetarian': 'vegetarian',
     'vegan': 'vegan',
-    'gluten-free': 'glutenFree',
+    'glutenFree': 'glutenFreeOptional',
     'spicy': 'spicy',
-    'nut-free': 'nutFree',
-    'dairy-free': 'dairyFree',
+    // Remove 'nut-free': 'nutFree', since it's not in DietaryTag
+    'dairy-free': 'containsDairy',
+    'eggFree': 'containsEgg',
+    'meat': 'containsMeat',
+    'shellfish': 'containsShellfish',
+    // Remove 'chefs-pick': 'chefsPick', since it's not in DietaryTag
   }
   return mapping[oldType] || null
 }
@@ -47,9 +52,7 @@ const InteractiveMenu = () => {
       if (item.dietary) {
         item.dietary.forEach((oldType) => {
           const tag = mapDietaryTypeToTag(oldType)
-          if (tag) {
-            allTags.add(tag)
-          }
+          if (tag) allTags.add(tag)
         })
       }
     })
@@ -76,9 +79,7 @@ const InteractiveMenu = () => {
               <button
                 key={style}
                 type='button'
-                onClick={() => {
-                  setActiveStyle(style)
-                }}
+                onClick={() => setActiveStyle(style)}
                 className={`rounded-full border px-5 py-2 text-sm font-medium transition ${
                   isActive
                     ? 'bg-primary text-white border-primary shadow-md'
@@ -107,9 +108,7 @@ const InteractiveMenu = () => {
                     className='w-full px-8 py-6 text-left transition hover:bg-white/20'>
                     <div className='grid grid-cols-[2fr_1fr_auto] items-center gap-4 text-deep'>
                       <div>
-                        <p className='text-lg font-semibold'>
-                          {item.name}
-                        </p>
+                        <p className='text-lg font-semibold'>{item.name}</p>
                         {item.dietary && item.dietary.length > 0 && (
                           <div className='flex items-center gap-1.5 flex-wrap'>
                             {item.dietary
@@ -161,8 +160,7 @@ const InteractiveMenu = () => {
             })}
           </div>
         </div>
-        
-        {/* Legend at bottom showing only dietary labels used in menu */}
+
         {usedDietaryTags.length > 0 && (
           <div className='mt-8 flex justify-center'>
             <DietaryLegend iconSize={16} tags={usedDietaryTags} />
@@ -174,4 +172,3 @@ const InteractiveMenu = () => {
 }
 
 export default InteractiveMenu
-

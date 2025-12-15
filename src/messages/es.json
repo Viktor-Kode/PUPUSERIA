@@ -1,110 +1,109 @@
 {
   "nav": {
-    "aboutUs": "Sobre Nosotros",
+    "aboutUs": "Nuestra Historia",
     "menu": "Menú",
     "contactUs": "Contáctanos"
   },
   "hero": {
-    "cantina": "Freddys Tacos Cantina",
+    "cantina": "Pupusería Mi Bendición",
     "slides": {
       "slide1": {
-        "title": "Freddys Tacos Después del Anochecer",
-        "description": "Entra a nuestra taquería principal y saborea tacos creados por chefs, cocinados sobre llamas de mezquite, acompañados de cócteles de agave elaborados en casa."
+        "title": "Auténtico Sabor Salvadoreño",
+        "description": "Experimenta el verdadero sabor de El Salvador con nuestras pupusas hechas a mano, elaboradas con masa fresca y rellenas de ingredientes saludables, servidas con nuestro curtido tradicional."
       },
       "slide2": {
-        "title": "Creaciones Estacionales del Comal",
-        "description": "Nuestra cocina reinventa los platillos regionales mexicanos con productos del mercado, masa molida en casa y la energía audaz de la comida callejera."
+        "title": "Cocina de la Abuela",
+        "description": "Cada platillo sigue recetas familiares de generaciones, preparadas con el mismo amor y cuidado que alimentó a nuestros ancestros. Esto es comida con bendición."
       },
       "slide3": {
-        "title": "Degustaciones y Maridajes de Agave",
-        "description": "Reserva una experiencia con vuelos de tacos curados, maridajes de ceviche y mezcales raros obtenidos directamente de Oaxaca."
+        "title": "Rico y Saludable",
+        "description": "Saborea el equilibrio entre delicioso y nutritivo. Nuestra cocina enfatiza vegetales frescos, proteínas de origen local y métodos de preparación tradicionales para comidas que alimentan el cuerpo y el alma."
       }
     },
-    "viewMenu": "Ver Menú",
-    "contactUs": "Contáctanos"
+    "viewMenu": "Ver Nuestro Menú",
+    "contactUs": "Visítanos"
   },
   "menu": {
-    "title": "Menú de Degustación",
-    "subtitle": "Explora la Selección Actual",
-    "description": "Filtra por estilo para explorar los últimos tacos de Freddys, pequeños bocados y finales dulces. Toca una fila para revelar las notas del chef para cada plato.",
+    "title": "Nuestra Cocina",
+    "subtitle": "Comida Hecha con Amor",
+    "description": "Explora nuestra selección de platillos tradicionales salvadoreños elaborados con ingredientes frescos y saludables. Cada platillo se prepara diariamente con cuidado y autenticidad.",
     "headers": {
-      "name": "Nombre",
-      "style": "Estilo",
+      "name": "Platillo",
+      "style": "Tipo",
       "price": "Precio"
     }
   },
   "features": {
-    "title": "Por Qué Elegirnos",
-    "subtitle": "Experimenta Más Que Solo una Comida",
+    "title": "Nuestra Promesa",
+    "subtitle": "Más Que Solo Comida",
     "feature1": {
-      "heading": "Ambiente de Comida Elegante",
-      "subheading": "Disfruta de un espacio cálido y refinado perfecto para cenas íntimas o reuniones de grupos pequeños."
+      "heading": "Ingredientes Frescos y Locales",
+      "subheading": "Obtenemos productos frescos e ingredientes de calidad diariamente, apoyando a granjas locales para los sabores más vibrantes."
     },
     "feature2": {
-      "heading": "Creaciones del Chef Firma",
-      "subheading": "Prueba platos únicos elaborados con pasión por nuestro equipo culinario de primer nivel."
+      "heading": "Tradición Familiar",
+      "subheading": "Cada receta proviene de generaciones de tradición familiar, preparada con las técnicas auténticas de la cocina casera salvadoreña."
     },
     "feature3": {
-      "heading": "Ingredientes Frescos y Locales",
-      "subheading": "Utilizamos productos de origen local diariamente para un sabor y calidad inigualables."
+      "heading": "Opciones Saludables",
+      "subheading": "Disfruta de nuestra selección de opciones vegetarianas, veganas y sin gluten, todas elaboradas con el mismo cuidado que nuestros platillos tradicionales."
     },
     "feature4": {
-      "heading": "Reservas Sin Complicaciones",
-      "subheading": "Reserva en línea en segundos o entra en cualquier momento: estamos listos cuando tú lo estés."
+      "heading": "Ambiente Acogedor",
+      "subheading": "Relájate en nuestro espacio cálido y familiar que se siente como en casa, perfecto para comidas familiares y reuniones amistosas."
     }
   },
   "about": {
-    "title": "Sobre Nosotros",
-    "heading": "Creado con Pasión, Servido con Orgullo",
-    "paragraph1": "En Freddys Tacos, cada tortilla se prensa al momento y cada bocado ahumado rinde homenaje a los mercados que nos inspiraron. Asamos, guisamos y asamos lentamente con intención, llevando el alma de la comida callejera mexicana a una cantina íntima y moderna.",
-    "paragraph2": "Ya sea que estés celebrando una ocasión especial o disfrutando de una noche casual, nuestro ambiente acogedor y creaciones sabrosas prometen algo verdaderamente especial para cada invitado."
+    "title": "Nuestra Filosofía",
+    "heading": "Hecho a Mano con Corazón, Elaborado con Cuidado",
+    "paragraph1": "En Pupusería Mi Bendición, cada platillo comienza con nuestro compromiso con 'Rico y Saludable'. Creemos que el sabor auténtico viene de respetar los ingredientes en su forma más pura. Por eso seleccionamos productos frescos y locales, y preparamos todo desde cero, tal como nos enseñaron nuestras abuelas.",
+    "paragraph2": "Nuestra cocina es donde la tradición se encuentra con la nutrición. Desde la masa molida en piedra hasta rellenos frescos de la huerta, elaboramos cada pupusa con ingredientes conscientes y generaciones de amor salvadoreño. Esto no es solo comida; es comida con bendición—una bendición saludable para tu mesa."
   },
   "contact": {
-    "title": "Contáctanos",
-    "heading": "Ponte en Contacto",
+    "title": "Visítanos",
+    "heading": "Bienvenidos a Nuestra Mesa",
     "form": {
-      "fullName": "Nombre Completo",
+      "fullName": "Tu Nombre",
       "email": "Correo Electrónico",
       "phone": "Número de Teléfono (Opcional)",
-      "message": "Mensaje",
-      "submit": "Enviar",
+      "message": "Tu Mensaje",
+      "submit": "Enviar Mensaje",
       "submitting": "Enviando...",
       "placeholders": {
-        "fullName": "Juan Pérez",
-        "email": "juan.perez@ejemplo.com",
-        "phone": "+1234567890",
-        "message": "¿Cómo podemos ayudarte?"
+        "fullName": "María García",
+        "email": "maria@ejemplo.com",
+        "phone": "+1 (555) 123-4567",
+        "message": "¿Preguntas sobre nuestro menú, catering u horarios?"
       }
     },
     "validation": {
-      "fullNameMin": "El nombre completo debe tener al menos 2 caracteres.",
-      "fullNameMax": "El nombre completo es demasiado largo.",
-      "emailInvalid": "Ingresa una dirección de correo electrónico válida.",
-      "phoneInvalid": "Ingresa un número de teléfono válido.",
-      "messageMin": "Por favor, cuéntanos cómo podemos ayudarte.",
+      "fullNameMin": "Por favor ingresa tu nombre.",
+      "fullNameMax": "El nombre es demasiado largo.",
+      "emailInvalid": "Por favor ingresa un correo electrónico válido.",
+      "phoneInvalid": "Por favor ingresa un número de teléfono válido.",
+      "messageMin": "Por favor cuéntanos cómo podemos ayudarte.",
       "messageMax": "El mensaje es demasiado largo."
     },
     "messages": {
-      "success": "¡Recibimos tu mensaje. Te responderemos pronto!",
-      "error": "No pudimos enviar tu mensaje. Por favor, inténtalo de nuevo.",
-      "thanks": "¡Gracias! Recibimos tu mensaje y te responderemos pronto."
+      "success": "¡Gracias! Recibimos tu mensaje y responderemos pronto.",
+      "error": "Algo salió mal. Por favor inténtalo de nuevo.",
+      "thanks": "¡Gracias por contactarnos! Nos comunicaremos pronto contigo."
     }
   },
   "footer": {
-    "description": "Una plantilla de concepto de taco moderna construida para mostrar experiencias gastronómicas inmersivas y menús creados por chefs.",
-    "contactUs": "Contáctanos",
-    "address": "Tu Dirección, Ciudad, País",
-    "copyright": "© {year} Plantilla de Freddys Tacos. Todos los derechos reservados.",
+    "description": "Pupusería Mi Bendición trae sabores auténticos salvadoreños con un enfoque en ingredientes frescos y saludables. Experimenta la comida con bendición—alimentos preparados con amor y cuidado.",
+    "contactUs": "Visita o Llama",
+    "address": "Tu Dirección, Ciudad, Estado, Código Postal",
+    "copyright": "© {year} Pupusería Mi Bendición. Todos los derechos reservados.",
     "social": {
-      "visitProfile": "Visitar perfil social"
+      "visitProfile": "Síguenos en redes sociales"
     }
   },
   "common": {
     "home": "Inicio",
-    "phone": "+1 (000) 000-0000",
-    "callReservations": "Llama a nuestro equipo de reservas al +1 (000) 000-0000",
-    "toggleMenu": "Alternar menú móvil",
-    "closeMenu": "Cerrar menú modal"
+    "phone": "+1 (555) 123-4567",
+    "callReservations": "Para preguntas o catering: +1 (555) 123-4567",
+    "toggleMenu": "Alternar menú de navegación",
+    "closeMenu": "Cerrar menú"
   }
 }
-

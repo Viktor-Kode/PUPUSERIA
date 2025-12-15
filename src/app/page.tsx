@@ -6,7 +6,7 @@ import SimpleGallery from '@/app/components/Home/SimpleGallery'
 import { Metadata } from 'next'
 import ContactForm from './components/Contact/Form'
 export const metadata: Metadata = {
-  title: 'Freddys Tacos',
+  title: 'Pupusería Mi Bendición',
 }
 
 export default function Home() {

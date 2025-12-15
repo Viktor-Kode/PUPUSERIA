@@ -13,9 +13,10 @@ const Cook = () => {
           <div className='lg:col-span-6 flex lg:justify-start justify-center'>
             <Image
               src='/images/Cook/kitchen-primary.jpeg'
-              alt='Chef preparing a dish in the kitchen'
+              alt='Chef preparing fresh, organic pupusas in the kitchen'
               width={636}
               height={808}
+              className='object-cover rounded-lg shadow-lg'
             />
           </div>
           <div className='lg:col-span-6 flex flex-col justify-start items-center lg:items-start relative z-10'>
@@ -31,6 +32,33 @@ const Cook = () => {
             <p className='text-deep/70 text-lg font-normal mb-10 text-start'>
               {t('about.paragraph2')}
             </p>
+            
+            {/* Added a section about the "Rico y Saludable" philosophy */}
+            <div className='mt-6 p-6 bg-white/10 rounded-xl border border-white/20'>
+              <h3 className='text-xl font-bold text-deep mb-3'>Nuestra Filosofía: Rico y Saludable</h3>
+              <ul className='space-y-3 text-deep/80'>
+                <li className='flex items-start'>
+                  <span className='text-green-600 mr-2'>✓</span>
+                  <span>Ingredientes frescos y orgánicos de proveedores locales</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-green-600 mr-2'>✓</span>
+                  <span>Masa de maíz entero molido fresco cada día</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-green-600 mr-2'>✓</span>
+                  <span>Opciones vegetarianas, veganas y sin gluten</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-green-600 mr-2'>✓</span>
+                  <span>Técnicas tradicionales con un enfoque en la nutrición</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-green-600 mr-2'>✓</span>
+                  <span>Sin conservantes ni aditivos artificiales</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
